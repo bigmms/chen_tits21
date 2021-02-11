@@ -1,0 +1,10 @@
+keras==2.3.1
+matplotlib==3.1.1
+numpy==1.15.0
+opencv-python==4.3.0.38
+Pillow==6.2.1
+scikit-image==0.14.2
+scipy==1.2.0
+tensorflow==1.14.0
+sewar==0.4.3
+segmentation-models==0.2.1
