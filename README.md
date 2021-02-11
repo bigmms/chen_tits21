@@ -9,3 +9,12 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 **Paper**: [PDF](https://ieeexplore.ieee.org/document/9325516)
 
 ## Requirements
+* Python 3.5
+* numpy 1.15.0
+* openCV 4.3.0.38
+* keras 2.3.1
+* tensorflow 1.14.0
+* scikit-image 0.14.2
+* pillow 6.2.1
+* sewar 0.4.3
+* segmentation-models 0.2.1
