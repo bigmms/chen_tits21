@@ -1,3 +1,4 @@
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=flat-square)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbigmms%2Fchen_tits21&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 # Deep Trident Decomposition Network for Single License Plate Image Glare Removal
 
@@ -21,11 +22,19 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 * sewar 0.4.3
 * segmentation-models 0.2.1
 
-## Model
-Pre-trained models can be downloaded from [google drive](https://drive.google.com/file/d/1rYJrxFW3s2qh94vELcxQmlU09GR_c7LM/view) or [baidu drive]( https://pan.baidu.com/s/1VJtkwSqYG9WIjNuvv0PSvQ)(提取码: qpuf).
-
-## Dataset
+### Dataset
 The sun glare image dataset can be downloaded from [here](https://bigmms.github.io/chen_tits21_dataset/).
+
+## Model
+Pre-trained models can be downloaded from [google drive](https://drive.google.com/file/d/1rYJrxFW3s2qh94vELcxQmlU09GR_c7LM/view) or [baidu drive]( https://pan.baidu.com/s/1VJtkwSqYG9WIjNuvv0PSvQ)(提取碼: qpuf).
+
+### It was tested and runs under the following OSs:
+* Windows 10
+* Ubuntu 16.04
+
+Might work under others, but didn't get to test any other OSs just yet.
+
+
 
 ## Usage
 * Training
@@ -47,7 +56,8 @@ The remaining images were the recovered results using the methods of (a) Engin e
 ![](img/result.png)
 
 
-## Citation
+## License + Attribution
+The ITS code is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Commercial usage is not permitted. If you use this code in a scientific publication, please cite the following [paper](https://ieeexplore.ieee.org/document/9357944):
 ```
 @ARTICLE{9357944,
   author={B. -H. {Chen} and S. {Ye} and J. -L. {Yin} and H. -Y. {Cheng} and D. {Chen}},
