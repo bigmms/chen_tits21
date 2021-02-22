@@ -43,9 +43,9 @@ $ python test.py --test_path=./dataset/test/I --load_pretrain=./save_weight/gene
 ```
 
 ## Qualitative Results
-<div align="center">
-<img src='img/result1.png'>
-</div>
+The remaining images were the recovered results using the methods of (a) Engin et al., (b) Li et al., (c) Qian et al., (d) Yang et al., (e) Wei et al., and (f) Zhang et al. as well as (g) our previous method and (h) the method proposed in this study.
+![](img/result.png)
+
 
 ## Citation
 ```
