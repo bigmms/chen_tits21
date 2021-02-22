@@ -50,7 +50,7 @@ To test this code
 ```bash
 $ python test.py --test_path=./dataset/test/synthesized_glare_images --load_pretrain=./save_weight/model.h5
 ```
-The test results will be saved in: `./result/`
+The test results will be saved in: `./test_result/`
 
 ## Qualitative Results
 The remaining images were the recovered results using the methods of (a) Engin et al., (b) Li et al., (c) Qian et al., (d) Yang et al., (e) Wei et al., and (f) Zhang et al. as well as (g) our previous method and (h) the method proposed in this study.
