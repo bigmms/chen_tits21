@@ -9,9 +9,16 @@ from utility_file.common import *
 from datetime import datetime
 import os
 from skimage.io import imsave
+import argparse
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="ITS")
+    parser.add_argument("--test_path", default="./dataset1/test/synthesized_glare_images", type=str, help="Training datasetet path")
+    parser.add_argument("--load_pretrain", default="./save_weight/generator.h5", type=str, help="Pretrain generator model path")
+    return parser.parse_args()
 
 class Glare_Removal():
-    def __init__(self):
+    def __init__(self, opt):
         self.img_rows = 80
         self.img_cols = 176
         self.channels = 3
@@ -19,7 +26,7 @@ class Glare_Removal():
 
         # Configure data loader
         self.dataset_name = 'dataset'
-        self.data_loader = DataLoader(dataset_name=self.dataset_name,
+        self.data_loader = DataLoader(args=opt,
                                       img_res=(self.img_rows, self.img_cols))
 
         # Calculate output shape of D (PatchGAN)
@@ -36,7 +43,8 @@ class Glare_Removal():
         # Input images
         I = Input(shape=self.img_shape)
         self.generator = self.build_generator()
-        self.generator.load_weights('./save_weight/generator.h5')
+        if opt.load_pretrain:
+            self.generator.load_weights(opt.load_pretrain)
         L_prime, B_prime, B, Clean= self.generator([I])
 
         # For the combined model we will only train the generator
@@ -56,7 +64,7 @@ class Glare_Removal():
         return discriminator_model(input_shape=self.img_shape, filters=64)
 
     def test(self):
-        os.makedirs('./test_results/', exist_ok=True)
+        os.makedirs('./test_result/', exist_ok=True)
         I = self.data_loader.load_test_data()
 
         start_time = datetime.now()
@@ -64,7 +72,7 @@ class Glare_Removal():
             I_batch = I[b:(b + 1)]
             L_prime, B_prime, B, Clean = self.generator.predict([I_batch])
             output = Clean[0].astype(np.uint8)
-            imsave("./test_results/%05d.png" % (b + 1), output)
+            imsave("./test_result/%05d.png" % (b + 1), output)
             print(b + 1)
         end_time = (datetime.now() - start_time) / len(I)
 
@@ -86,6 +94,6 @@ if __name__ == '__main__':
         except RuntimeError as e:
             # Memory growth must be set before GPUs have been initialized
             print(e)
-
-    glare_removal_model = Glare_Removal()
+    opt = parse_args()
+    glare_removal_model = Glare_Removal(opt)
     glare_removal_model.test()

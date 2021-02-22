@@ -8,17 +8,25 @@ from utility_file.model import discriminator_model, generator_model
 from utility_file.common import *
 from datetime import datetime
 import os
+import argparse
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="ITS")
+    parser.add_argument("--train_path", default="", type=str, help="Training datasetet path")
+    parser.add_argument("--vaild_path", default="./dataset/test/I", type=str, help="Vaild datasetet path")
+    parser.add_argument("--load_pretrain", default="./save_weight/generator.h5", type=str, help="Pretrain generator model path")
+    parser.add_argument("--save_model_dir", default="./save_weight", type=str, help="The dir where G D model save")
+    return parser.parse_args()
 
 class Glare_Removal():
-    def __init__(self):
+    def __init__(self, opt):
         self.img_rows = 80
         self.img_cols = 176
         self.channels = 3
         self.img_shape = (self.img_rows, self.img_cols, self.channels)
 
         # Configure data loader
-        self.dataset_name = 'dataset'
-        self.data_loader = DataLoader(dataset_name=self.dataset_name,
+        self.data_loader = DataLoader(args=opt,
                                       img_res=(self.img_rows, self.img_cols))
 
         # Calculate output shape of D (PatchGAN)
@@ -35,7 +43,8 @@ class Glare_Removal():
         # Input images
         I = Input(shape=self.img_shape)
         self.generator = self.build_generator()
-        # self.generator.load_weights('./save_weight/generator.h5')
+        if opt.load_pretrain:
+            self.generator.load_weights(opt.load_pretrain)
         L_prime, B_prime, B, Clean= self.generator([I])
 
         # For the combined model we will only train the generator
@@ -84,8 +93,8 @@ class Glare_Removal():
 
                 if (epoch + 1) % 100 == 0:
                     self.validation(e=(epoch + 1))
-                    self.generator.save_weights("./save_weight/generator_%d.h5" % (epoch + 1))
-                    self.discriminator.save_weights("./save_weight/discriminator_%d.h5" % (epoch + 1))
+                    self.generator.save_weights("%s/generator_%04d.h5" % (opt.save_model_dir(epoch + 1)))
+                    self.discriminator.save_weights("%s/discriminator_%04d.h5" % (opt.save_model_dir(epoch + 1)))
 
     def validation(self, e):
         os.makedirs('./result/%04d' % e, exist_ok=True)
@@ -108,6 +117,6 @@ if __name__ == '__main__':
         except RuntimeError as e:
             # Memory growth must be set before GPUs have been initialized
             print(e)
-
-    glare_removal_model = Glare_Removal()
+    opt = parse_args()
+    glare_removal_model = Glare_Removal(opt)
     glare_removal_model.train(epochs=100, batch_size=4)
