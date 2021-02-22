@@ -8,6 +8,8 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 
 **Paper**: [PDF](https://ieeexplore.ieee.org/document/9357944)
 
+![](img/main_network_new.png)
+
 ## Requirements
 * Python 3.5
 * numpy 1.15.0
@@ -41,7 +43,7 @@ $ python test.py --test_path=./dataset/test/I --load_pretrain=./save_weight/gene
 ```
 
 ## Qualitative Results
-<div style="text-align: center">
+<div align="center">
 <img src='img/result1.png'>
 </div>
 
