@@ -23,7 +23,7 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 Pre-trained models can be downloaded from google drive.
 
 ## Dataset
-The sun glare image dataset can be downloaded from here.
+The sun glare image dataset can be downloaded from [here](https://bigmms.github.io/chen_tits21_dataset/).
 
 ## Usage
 * Training
