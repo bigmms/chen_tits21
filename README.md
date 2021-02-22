@@ -22,7 +22,7 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 * segmentation-models 0.2.1
 
 ## Model
-Pre-trained models can be downloaded from google drive.
+Pre-trained models can be downloaded from [google drive](https://drive.google.com/file/d/1rYJrxFW3s2qh94vELcxQmlU09GR_c7LM/view) or [baidu drive]( https://pan.baidu.com/s/1VJtkwSqYG9WIjNuvv0PSvQ)(提取码: qpuf).
 
 ## Dataset
 The sun glare image dataset can be downloaded from [here](https://bigmms.github.io/chen_tits21_dataset/).
