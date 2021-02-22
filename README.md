@@ -34,6 +34,12 @@ $ python train.py --train_path=/your/trainset/path --vaild_path=/your/valset/pat
 ```bash
 $ python test.py --test_path=/your/testset/path --load_pretrain=/pretrain/generator/model/path
 ```
+## Demo
+To test this code
+```bash
+$ python test.py --test_path=./dataset/test/I --load_pretrain=./save_weight/generator.h5
+```
+
 ## Citation
 ```
 @ARTICLE{9357944,
