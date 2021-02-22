@@ -25,7 +25,7 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 ### Dataset
 The sun glare image dataset can be downloaded from [here](https://bigmms.github.io/chen_tits21_dataset/).
 
-## Model
+### Model
 Pre-trained models can be downloaded from [google drive](https://drive.google.com/file/d/1rYJrxFW3s2qh94vELcxQmlU09GR_c7LM/view) or [baidu drive]( https://pan.baidu.com/s/1VJtkwSqYG9WIjNuvv0PSvQ)(提取碼: qpuf).
 
 ### It was tested and runs under the following OSs:
@@ -34,9 +34,8 @@ Pre-trained models can be downloaded from [google drive](https://drive.google.co
 
 Might work under others, but didn't get to test any other OSs just yet.
 
-
-
-## Usage
+## Getting Started:
+### Usage
 * Training
 ```bash
 $ python train.py --train_path=/your/trainset/path --vaild_path=/your/valset/path --save_model_dir=/save/model/path --load_pretrain=/pretrain/generator/model/path
@@ -45,11 +44,13 @@ $ python train.py --train_path=/your/trainset/path --vaild_path=/your/valset/pat
 ```bash
 $ python test.py --test_path=/your/testset/path --load_pretrain=/pretrain/generator/model/path
 ```
-## Demo
+
+### Demo
 To test this code
 ```bash
-$ python test.py --test_path=./dataset/test/I --load_pretrain=./save_weight/generator.h5
+$ python test.py --test_path=./dataset/test/synthesized_glare_images --load_pretrain=./save_weight/model.h5
 ```
+The test results will be saved in: `./result/`
 
 ## Qualitative Results
 The remaining images were the recovered results using the methods of (a) Engin et al., (b) Li et al., (c) Qian et al., (d) Yang et al., (e) Wei et al., and (f) Zhang et al. as well as (g) our previous method and (h) the method proposed in this study.
