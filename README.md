@@ -6,7 +6,7 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 
 **Authors**: Bo-Hao Chen, Shiting Ye, Jia-Li Yin, Hsiang-Yin Cheng, and Dewang Chen
 
-**Paper**: [PDF](https://ieeexplore.ieee.org/document/9325516)
+**Paper**: [PDF](https://ieeexplore.ieee.org/document/9357944)
 
 ## Requirements
 * Python 3.5
@@ -25,11 +25,12 @@ Pre-trained models can be downloaded from google drive.
 ## Dataset
 The sun glare image dataset can be downloaded from here.
 
-## Training
+## Usage
+* Training
 ```bash
 $ python train.py --train_path=/your/trainset/path --vaild_path=/your/valset/path --save_model_dir=/save/model/path --load_pretrain=/pretrain/generator/model/path
 ```
-## Testing
+* Testing
 ```bash
 $ python test.py --test_path=/your/testset/path --load_pretrain=/pretrain/generator/model/path
 ```
