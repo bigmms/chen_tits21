@@ -18,3 +18,30 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 * pillow 6.2.1
 * sewar 0.4.3
 * segmentation-models 0.2.1
+
+## Model
+Pre-trained models can be downloaded from google drive.
+
+## Dataset
+The sun glare image dataset can be downloaded from here.
+
+## Training
+```bash
+$ python train.py --train_path=/your/trainset/path --vaild_path=/your/valset/path --save_model_dir=/save/model/path --load_pretrain=/pretrain/generator/model/path
+```
+## Testing
+```bash
+$ python test.py --test_path=/your/testset/path --load_pretrain=/pretrain/generator/model/path
+```
+## Citation
+```
+@ARTICLE{9357944,
+  author={B. -H. {Chen} and S. {Ye} and J. -L. {Yin} and H. -Y. {Cheng} and D. {Chen}},
+  journal={IEEE Transactions on Intelligent Transportation Systems}, 
+  title={Deep Trident Decomposition Network for Single License Plate Image Glare Removal}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-12},
+  doi={10.1109/TITS.2021.3058530}}
+```
