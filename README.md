@@ -39,7 +39,11 @@ To test this code
 ```bash
 $ python test.py --test_path=./dataset/test/I --load_pretrain=./save_weight/generator.h5
 ```
+
 ## Qualitative Results
+<div style="text-align: center">
+<img src='img/result1.png'>
+</div>
 
 ## Citation
 ```
