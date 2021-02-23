@@ -12,6 +12,10 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 ![](img/main_network_new.png)
 
 ## Requirements
+
+### Dependencies
+* cuda 10.0_0
+* cudnn 7.3.1
 * Python 3.5
 * numpy 1.15.0
 * openCV 4.3.0.38
@@ -27,10 +31,6 @@ The sun glare image dataset can be downloaded from [here](https://bigmms.github.
 
 ### Model
 Pre-trained models can be downloaded from [google drive](https://drive.google.com/file/d/1rYJrxFW3s2qh94vELcxQmlU09GR_c7LM/view) or [baidu drive]( https://pan.baidu.com/s/1VJtkwSqYG9WIjNuvv0PSvQ)(password: qpuf).
-
-### Dependencies
-* cuda 10.0_0
-* cudnn 7.3.1
 
 ### It was tested and runs under the following OSs:
 * Windows 10
