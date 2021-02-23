@@ -63,7 +63,7 @@ The remaining images were the recovered results using the methods of (a) Engin e
 ## License + Attribution
 The ITS code is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Commercial usage is not permitted. If you use this code in a scientific publication, please cite the following [paper](https://ieeexplore.ieee.org/document/9357944):
 ```
-@ARTICLE{9357944,
+@ARTICLE{ChenTITS2021,
   author={B. -H. {Chen} and S. {Ye} and J. -L. {Yin} and H. -Y. {Cheng} and D. {Chen}},
   journal={IEEE Transactions on Intelligent Transportation Systems}, 
   title={Deep Trident Decomposition Network for Single License Plate Image Glare Removal}, 
