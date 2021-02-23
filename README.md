@@ -29,7 +29,8 @@ The sun glare image dataset can be downloaded from [here](https://bigmms.github.
 Pre-trained models can be downloaded from [google drive](https://drive.google.com/file/d/1rYJrxFW3s2qh94vELcxQmlU09GR_c7LM/view) or [baidu drive]( https://pan.baidu.com/s/1VJtkwSqYG9WIjNuvv0PSvQ)(password: qpuf).
 
 ### Dependencies
-* Pycharm 2019.1.3 x64
+* cuda 10.0_0
+* cudnn 7.3.1
 
 ### It was tested and runs under the following OSs:
 * Windows 10
