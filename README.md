@@ -1,11 +1,11 @@
+# Deep Trident Decomposition Network for Single License Plate Image Glare Removal
+
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=flat-square)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbigmms%2Fchen_tits21&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 ![](https://img.shields.io/badge/Tensorflow-1.14.0-yellow)
 ![](https://img.shields.io/badge/Cuda-10.0__0-blue)
 
-
-
-# Deep Trident Decomposition Network for Single License Plate Image Glare Removal
+![](img/main_network_new.png)
 
 ## Introduction
 We propose a deep trident decomposition network with a large-scale sun glare image dataset for glare removal from single images. Specifically, the proposed network is designed and implemented with a trident decomposition module for decomposing an input glare image into occlusion, foreground, and coarse glare-free images by exploring background features from spatial locations. Moreover, a residual refinement module is adopted to refine the coarse glare-free image into fine glare-free image by learning the residuals from features of multiscale receptive field.
@@ -14,7 +14,7 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 
 **Paper**: [PDF](https://ieeexplore.ieee.org/document/9357944)
 
-![](img/main_network_new.png)
+
 
 ## Requirements
 
