@@ -7,12 +7,19 @@
 
 ![](img/main_network_new.png)
 
-## Introduction
-We propose a deep trident decomposition network with a large-scale sun glare image dataset for glare removal from single images. Specifically, the proposed network is designed and implemented with a trident decomposition module for decomposing an input glare image into occlusion, foreground, and coarse glare-free images by exploring background features from spatial locations. Moreover, a residual refinement module is adopted to refine the coarse glare-free image into fine glare-free image by learning the residuals from features of multiscale receptive field.
+
+This repository provides the dataset and code for the following paper:
+
+**Paper**: Deep Trident Decomposition Network for Single License Plate Image Glare Removal 
 
 **Authors**: Bo-Hao Chen, Shiting Ye, Jia-Li Yin, Hsiang-Yin Cheng, and Dewang Chen
 
-**Paper**: [PDF](https://ieeexplore.ieee.org/document/9357944)
+in [IEEE TITS](https://ieeexplore.ieee.org/document/9357944).
+
+
+## Introduction
+We propose a deep trident decomposition network with a large-scale sun glare image dataset for glare removal from single images. Specifically, the proposed network is designed and implemented with a trident decomposition module for decomposing an input glare image into occlusion, foreground, and coarse glare-free images by exploring background features from spatial locations. Moreover, a residual refinement module is adopted to refine the coarse glare-free image into fine glare-free image by learning the residuals from features of multiscale receptive field.
+
 
 
 
@@ -35,7 +42,7 @@ We propose a deep trident decomposition network with a large-scale sun glare ima
 The sun glare image dataset can be downloaded from [here](https://bigmms.github.io/chen_tits21_dataset/).
 
 ### Model
-Pre-trained models can be downloaded from [google drive](https://drive.google.com/file/d/1rYJrxFW3s2qh94vELcxQmlU09GR_c7LM/view) or [baidu drive]( https://pan.baidu.com/s/1VJtkwSqYG9WIjNuvv0PSvQ)(password: qpuf).
+Pre-trained models can be downloaded from [google drive](https://drive.google.com/file/d/1rYJrxFW3s2qh94vELcxQmlU09GR_c7LM/view) or [baidu drive]( https://pan.baidu.com/s/1VJtkwSqYG9WIjNuvv0PSvQ) (password: qpuf).
 
 ### It was tested and runs under the following OSs:
 * Windows 10
@@ -67,7 +74,7 @@ The remaining images were the recovered results using the methods of (a) Engin e
 
 
 ## License + Attribution
-The ITS code is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Commercial usage is not permitted. If you use this code in a scientific publication, please cite the following [paper](https://ieeexplore.ieee.org/document/9357944):
+This code is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Commercial usage is not permitted. If you use this code in a scientific publication, please cite the following [paper](https://ieeexplore.ieee.org/document/9357944):
 ```
 @ARTICLE{ChenTITS2021,
   author={B. -H. {Chen} and S. {Ye} and J. -L. {Yin} and H. -Y. {Cheng} and D. {Chen}},
