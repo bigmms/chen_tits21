@@ -17,11 +17,8 @@ This repository provides the dataset and code for the following paper:
 in [IEEE TITS](https://ieeexplore.ieee.org/document/9357944).
 
 
-## Introduction
-We propose a deep trident decomposition network with a large-scale sun glare image dataset for glare removal from single images. Specifically, the proposed network is designed and implemented with a trident decomposition module for decomposing an input glare image into occlusion, foreground, and coarse glare-free images by exploring background features from spatial locations. Moreover, a residual refinement module is adopted to refine the coarse glare-free image into fine glare-free image by learning the residuals from features of multiscale receptive field.
-
-
-
+## Abstract
+Deep convolutional neural networks have achieved state-of-the-art performance for the removal of atmospheric obscuration. However, most relevant studies have focused on eliminating the effects of atmospheric obscuration but not on the glare in images caused by reflected sunlight. On the basis of a glare image formation model, we propose a deep trident decomposition network with a large-scale sun glare image dataset for glare removal from single images. Specifically, the proposed network is designed and implemented with a trident decomposition module for decomposing an input glare image into occlusion, foreground, and coarse glare-free images by exploring background features from spatial locations. Moreover, a residual refinement module is adopted to refine the coarse glare-free image into fine glare-free image by learning the residuals from features of multiscale receptive field. The experimental results indicated that the proposed network significantly outperforms state-of-the-art atmospheric obscuration removal networks on the built dataset.
 
 ## Requirements
 
