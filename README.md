@@ -23,7 +23,7 @@ Deep convolutional neural networks have achieved state-of-the-art performance fo
 ## Requirements
 
 ### Dependencies
-* cuda 10.0_0
+* cuda 10.0
 * cudnn 7.3.1
 * Python 3.5
 * numpy 1.15.0
